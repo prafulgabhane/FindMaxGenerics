@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FindMaxGenerics
 {
+    public class FindMax <T> where T : IComparable
+    {
+        public static T MaxFloatNumber(T X, T Y, T Z)
     public class FindMax<T> where T : IComparable
     {
         public static T MaxIntNumber(T X, T Y, T Z)
