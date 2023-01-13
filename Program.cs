@@ -13,6 +13,11 @@ namespace FindMaxGenerics
             float Z = 1.2F;
 
             float val = FindMax<float>.MaxFloatNumber(X, Y, Z);
+            int X = 20;
+            int Y = 40;
+            int Z = 60;
+
+            int val = FindMax<int>.MaxIntNumber(X, Y, Z);
             Console.WriteLine("The greater num is " + val);
         }
     }

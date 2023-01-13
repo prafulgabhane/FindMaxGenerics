@@ -10,6 +10,9 @@ namespace FindMaxGenerics
     public class FindMax <T> where T : IComparable
     {
         public static T MaxFloatNumber(T X, T Y, T Z)
+    public class FindMax<T> where T : IComparable
+    {
+        public static T MaxIntNumber(T X, T Y, T Z)
         {
             if (X.CompareTo(Y) > 0 && X.CompareTo(Z) > 0 ||
                 X.CompareTo(Y) >= 0 && X.CompareTo(Z) > 0 ||
