@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Lang;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FindMaxGenerics
 {
-    public class FindMax<T> where T : ICompare
+    public class FindMax<T> where T : IComparable
     {
         public static T MaxIntNumber(T X, T Y, T Z)
         {
