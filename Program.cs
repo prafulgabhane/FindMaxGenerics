@@ -15,6 +15,7 @@ namespace FindMaxGenerics
 	    //output
             string val = FindMax<string>.MaxOfString(X, Y, Z);
             Console.WriteLine("The greater String is " + val);
+            
         }
     }
 }
