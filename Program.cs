@@ -8,12 +8,14 @@ namespace FindMaxGenerics
         {
             Console.WriteLine("Welcome to Find the Max Num of 3 Variables Program");
 
-            int X = 20;
-            int Y = 40;
-            int Z = 60;
-
-            int val = FindMax<int>.MaxIntNumber(X, Y, Z);
-            Console.WriteLine("The greater num is " + val);
+            string X = "Apple";
+            string Y = "Peach";
+            string Z = "Banana";
+            
+	    //output
+            string val = FindMax<string>.MaxOfString(X, Y, Z);
+            Console.WriteLine("The greater String is " + val);
+            
         }
     }
 }
