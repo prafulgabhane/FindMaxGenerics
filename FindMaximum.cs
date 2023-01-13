@@ -6,34 +6,52 @@ using System.Threading.Tasks;
 
 namespace FindMaxGenerics
 {
-    public class FindMax<T> where T : IComparable
+    public class FindMaximum<T> where T : IComparable
     {
-        public static T MaxIntNumber(T X, T Y, T Z)
+        public T A, B, C, Max;
+        public  FindMaximum(T A, T B, T C)
         {
-            if (X.CompareTo(Y) > 0 && X.CompareTo(Z) > 0 ||
-                X.CompareTo(Y) >= 0 && X.CompareTo(Z) > 0 ||
-                X.CompareTo(Y) > 0 && X.CompareTo(Z) >= 0)
-
-            {
-                return X;
-            }
-
-            if (Y.CompareTo(X) > 0 && Y.CompareTo(Z) > 0 ||
-                Y.CompareTo(X) >= 0 && Y.CompareTo(Z) > 0 ||
-                Y.CompareTo(X) > 0 && Y.CompareTo(Z) >= 0)
-
-            {
-                return Y;
-            }
-
-            if (Z.CompareTo(X) > 0 && Z.CompareTo(Y) > 0 ||
-                Z.CompareTo(X) >= 0 && Z.CompareTo(Y) > 0 ||
-                Z.CompareTo(X) > 0 && Z.CompareTo(Y) >= 0)
-
-            {
-                return Z;
-            }
-            return X;
+            this.A = A;
+            this.B = B;
+            this.C = C;
         }
+        public static T MaxNum(T A, T B, T C)
+        {
+            if (A.CompareTo(B) > 0 && A.CompareTo(C) > 0 ||
+                    A.CompareTo(B) >= 0 && A.CompareTo(C) > 0 ||
+                    A.CompareTo(B) > 0 && A.CompareTo(C) >= 0)
+            {
+                return A;
+            }
+
+            if (B.CompareTo(A) > 0 && B.CompareTo(C) > 0 ||
+                    B.CompareTo(A) >= 0 && B.CompareTo(C) > 0 ||
+                    B.CompareTo(B) > 0 && B.CompareTo(C) >= 0)
+            {
+                return B;
+            }
+
+            if (C.CompareTo(B) > 0 && C.CompareTo(A) > 0 ||
+                    C.CompareTo(B) >= 0 && C.CompareTo(A) > 0 ||
+                    C.CompareTo(B) > 0 && C.CompareTo(A) >= 0)
+            {
+                return C;
+            }
+            return default;
+        }
+        public T MaxMethod()
+        {
+            Max = FindMaximum<T>.MaxNum(this.A, this.B, this.C);
+            toPrint(Max);
+            return Max;
+
+        }
+        public void toPrint(T Max)
+        {
+            Console.WriteLine("Maximum is " + Max);
+        }
+
+
+
     }
 }
